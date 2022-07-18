@@ -1,10 +1,28 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import { FiAlignRight } from 'react-icons/fi';
 import Logo from '../../assets/icons/saturn.png';
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const links = [
+    {
+      id: 1,
+      path: 'rockets',
+      name: 'Rockets',
+    },
+    {
+      id: 2,
+      path: 'missions',
+      name: 'Missions',
+    },
+    {
+      id: 3,
+      path: 'profile',
+      name: 'My Profile',
+    },
+  ];
   return (
     <>
       <div className="navBg" />
@@ -34,8 +52,11 @@ const Navbar = () => {
           >
             <ul className="flex flex-col lg:flex-row list-none ">
 
-              <li className="nav-item px-3 py-2 font-mono flex items-center text-gray-400 text-lg hover:opacity-75">Rockets</li>
-
+              {links.map((link) => (
+                <li key={link.id} className="nav-item  px-3 py-2 font-mono flex items-center text-gray-400 text-lg hover:opacity-75">
+                  <NavLink to={link.path}>{link.name}</NavLink>
+                </li>
+              ))}
             </ul>
 
           </div>
