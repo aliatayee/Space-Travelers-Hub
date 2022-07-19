@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
           <div
             className={
-                            `lg:flex flex-grow justify-between items-center${navbarOpen ? ' flex' : ' hidden'}`
+                            `lg:flex flex-grow justify-between lg:justify-end items-center${navbarOpen ? ' flex' : ' hidden'}`
                         }
             id="example-navbar-danger"
           >
@@ -54,7 +54,7 @@ const Navbar = () => {
 
               {links.map((link) => (
                 <li key={link.id} className="nav-item  px-3 py-2 font-mono flex items-center text-gray-400 text-lg hover:opacity-75">
-                  <NavLink to={link.path}>{link.name}</NavLink>
+                  <NavLink to={link.path} className={({ isActive }) => (isActive ? 'active-link' : 'link-text')}>{link.name}</NavLink>
                 </li>
               ))}
             </ul>
