@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const FETCH_ROCKETS = 'space-travel-hub/rockets/FETCH_ROCKETS';
+const CHANGE_STATUS = 'space-travel-hub/rockets/CHANGE_STATUS';
 const initialState = [];
 
 const onSuccess = (rockets) => ({
@@ -19,10 +20,20 @@ export const fetchRocketsData = async (dispatch) => {
   dispatch(onSuccess(rocketsFetched));
 };
 
+export const ChangeStatus = (id) => ({
+  type: CHANGE_STATUS,
+  id,
+});
 const rocketReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ROCKETS: {
       return action.payload;
+    }
+    case CHANGE_STATUS: {
+      return state.map((rocket) => {
+        if (rocket.id !== action.id) return rocket;
+        return { ...rocket, reserved: true };
+      });
     }
     default: { return state; }
   }
