@@ -31,7 +31,11 @@ const rocketReducer = (state = initialState, action) => {
     }
     case CHANGE_STATUS: {
       return state.map((rocket) => {
-        if (rocket.id !== action.id) return rocket;
+        if (rocket.id !== action.id) { return rocket; }
+
+        if (rocket.reserved === true) {
+          return { ...rocket, reserved: false };
+        }
         return { ...rocket, reserved: true };
       });
     }
