@@ -19,7 +19,7 @@ const Navbar = () => {
     },
     {
       id: 3,
-      path: 'profile',
+      path: 'myprofile',
       name: 'My Profile',
     },
   ];
