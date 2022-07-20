@@ -1,4 +1,11 @@
 .rocket__img {
-    width: 100% !important;
-    max-width: 100%;
+  width: 100% !important;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .rocket__img {
+    width: 25rem !important;
+    max-width: none;
+  }
 }
