@@ -27,7 +27,11 @@ const Missions = () => {
             <tr key={el.mission_id}>
               <td className={classes.missionName}>{el.mission_name}</td>
               <td className={classes.missionDescription}>{el.description}</td>
-              <td className={classes.btnRow} />
+              <td className={classes.btnRow}>
+                <span className={el.active ? 'activeBadge' : 'inactiveBadge'}>
+                  {el.active ? 'Active Member' : 'Not A member'}
+                </span>
+              </td>
               <td className={classes.btnRow}>
                 <button
                   type="button"
