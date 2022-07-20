@@ -20,16 +20,33 @@ const Rocket = ({ rocket }) => {
         <div className="grid content-between">
           <div>
             <h1 className="font-bold">{rocket.name}</h1>
-            <div>{rocket.description}</div>
+            <div>
+              {rocket.reserved && (
+              <badge className="bg-blue-500 p-1 text-white rounded-sm pr-3 pl-3">Reserved</badge>
+              )}
+              {rocket.description}
+            </div>
           </div>
           <div className=" sm:w-full border-none pb-5">
-            <button
-              onClick={() => rocketHandleBtn(rocket.id)}
-              type="submit"
-              className="form-input mt-3 py-2 pr-4 pl-4 bg-blue-500 border-none text-white rounded-sm"
-            >
-              Reserve Rocket
-            </button>
+
+            {rocket.reserved
+              ? (
+                <button
+                  onClick={() => rocketHandleBtn(rocket.id)}
+                  type="button"
+                  className="form-input mt-3 py-2 pr-4 pl-4 bg-red-400 border-none text-white rounded-sm"
+                >
+                  Cancel Reservation
+                </button>
+              ) : (
+                <button
+                  onClick={() => rocketHandleBtn(rocket.id)}
+                  type="button"
+                  className="form-input mt-3 py-2 pr-4 pl-4 bg-blue-500 border-none text-white rounded-sm"
+                >
+                  Reserve Rocket
+                </button>
+              )}
           </div>
         </div>
       </div>
@@ -40,6 +57,7 @@ Rocket.propTypes = {
   rocket: PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
+    reserved: PropTypes.bool,
     description: PropTypes.string,
     flickrImages: PropTypes.instanceOf(Array),
   }).isRequired,
