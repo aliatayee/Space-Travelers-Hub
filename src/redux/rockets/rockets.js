@@ -12,7 +12,7 @@ export const fetchRocketsData = async (dispatch) => {
   const rocketsFetched = res.data.map((item) => ({
     id: item.id,
     name: item.rocket_name,
-    type: item.rocket_type,
+    description: item.description,
     flickrImages: item.flickr_images,
 
   }));
