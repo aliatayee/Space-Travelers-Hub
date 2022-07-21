@@ -1,14 +1,11 @@
 import { React } from 'react';
-import classes from '../Missions/MyProfile.module.css';
 import MyMission from '../Missions/MyMission';
 import MyRockets from '../../components/MyRockets/MyRockets';
 
 const MyProfile = () => (
-  <div className={classes.myProfile}>
-    <div>
-      <MyMission />
-      <MyRockets />
-    </div>
+  <div className="grid grid-cols-2 m-4 gap-y-4 gap-x-8">
+    <MyMission />
+    <MyRockets />
   </div>
 );
 
