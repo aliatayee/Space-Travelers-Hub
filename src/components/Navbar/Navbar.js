@@ -26,11 +26,11 @@ const Navbar = () => {
   return (
     <>
       <div className="navBg" />
-      <nav className="relative flex flex-wrap bg-white items-center border-b border-slate-200 justify-between px-2 py-3 mb-3 nav-layout">
+      <nav className="relative flex flex-wrap bg-white items-center border-b border-slate-200 justify-between px-2  mb-3 nav-layout">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+          <div className="w-full relative flex justify-between lg:w-auto items-center lg:static lg:block lg:justify-start">
             <a
-              className="font-bold leading-relaxed flex mr-4 py-2 whitespace-nowrap text-blue-500 text-2xl"
+              className="font-bold leading-relaxed flex items-center mr-4 py-2 whitespace-nowrap text-blue-500 text-2xl"
               href="/"
             >
               <img src={Logo} alt="logo" className="w-12" />
