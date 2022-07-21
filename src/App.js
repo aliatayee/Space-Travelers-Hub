@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Rockets from './pages/Rockets/Rockets';
 import Missions from './pages/Missions';
+import MyProfile from './pages/MyProfile';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Rockets />} />
         <Route path="/missions" element={<Missions />} />
-        <Route path="profile" element={<h1>Profile</h1>} />
+        <Route path="/myprofile" element={<MyProfile />} />
       </Routes>
     </Router>
   );
