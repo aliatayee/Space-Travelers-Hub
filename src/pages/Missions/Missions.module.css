@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+
+body {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.missions {
+  margin-right: 2.5rem;
+  margin-left: 4rem;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-align: left;
+  border: 2px solid #c0c0c0;
+}
+
+thead {
+  border-bottom: 3px solid #c0c0c0;
+  height: 10vh;
+}
+
+thead th {
+  padding: 10px;
+}
+
+thead th:first-child {
+  width: 8%;
+}
+
+thead th:nth-child(2) {
+  width: 59%;
+}
+
+thead th:nth-child(3) {
+  width: 16%;
+}
+
+thead th:nth-child(4) {
+  width: 17%;
+}
+
+.tableHeader {
+  font-size: 35px;
+  font-weight: 900;
+  padding: 10px;
+}
+
+tbody td {
+  padding: 10px;
+  border: 2px solid #c0c0c0;
+}
+
+tbody > :nth-child(odd) {
+  background-color: #dcdcdc;
+}
+
+.missionName {
+  font-weight: 900;
+  font-size: 32px;
+  vertical-align: top;
+  padding-top: 15px;
+}
+
+.btnRow {
+  text-align: center;
+}

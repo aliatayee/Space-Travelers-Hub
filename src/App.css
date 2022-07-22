@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+
+body {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.activeButton {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: 3px solid #f00;
+  border-radius: 5px;
+  color: #f00;
+  padding: 10px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.inactiveButton {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  border: 3px solid #404040;
+  border-radius: 5px;
+  color: #404040;
+  padding: 10px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.activeBadge {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  color: #fff;
+  background-color: #00bfff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.inactiveBadge {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  color: #fff;
+  background-color: #696969;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+}

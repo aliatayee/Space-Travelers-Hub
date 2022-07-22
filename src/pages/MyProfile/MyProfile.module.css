@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+
+* {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  line-height: 40px;
+}
+
+.myProfile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 0 3.5rem 2rem 4rem;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.missionList {
+  border: 2px solid #808080;
+  border-radius: 5px;
+  list-style: none;
+  padding: 0;
+}
+
+.missionList li:not(:last-child) {
+  border-bottom: 2px solid #808080;
+}
+
+.listItem {
+  padding: 10px 20px;
+}
