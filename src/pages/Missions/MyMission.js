@@ -1,6 +1,5 @@
 import { React } from 'react';
 import { useSelector } from 'react-redux';
-import classes from './MyProfile.module.css';
 
 const MyProfile = () => {
   const missions = useSelector((state) => state.missionsReducer).filter(
@@ -10,17 +9,19 @@ const MyProfile = () => {
   if (missions.length === 0) {
     return (
       <>
-        <h2>My Missions</h2>
-        <p>You have no missions</p>
+        <div className="border p-3 pb-5">
+          <h1 className="font-bold text-100 border-b">My Missions:</h1>
+          <p>You have no missions</p>
+        </div>
       </>
     );
   }
   return (
-    <div>
-      <h2>My Missions</h2>
-      <ul className={classes.missionList}>
+    <div className="border p-3 pb-5">
+      <h1 className="font-bold text-100 border-b">My Missions:</h1>
+      <ul>
         {missions.map((el) => (
-          <li className={classes.listItem} key={el.mission_id}>
+          <li className="border-b" key={el.mission_id}>
             {el.mission_name}
           </li>
         ))}
