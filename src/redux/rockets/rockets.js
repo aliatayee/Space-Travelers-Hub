@@ -4,7 +4,7 @@ const FETCH_ROCKETS = 'space-travel-hub/rockets/FETCH_ROCKETS';
 const CHANGE_STATUS = 'space-travel-hub/rockets/CHANGE_STATUS';
 const initialState = [];
 
-const onSuccess = (rockets) => ({
+export const onSuccess = (rockets) => ({
   type: FETCH_ROCKETS,
   payload: rockets,
 });

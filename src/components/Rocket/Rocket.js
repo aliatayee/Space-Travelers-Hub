@@ -11,7 +11,7 @@ const Rocket = ({ rocket }) => {
   };
   const rockets = useSelector((state) => state.rockets);
   useEffect(() => {
-    if (!rockets.length) dispatch(fetchRocketsData());
+    if (!rockets.length) dispatch(fetchRocketsData);
   }, []);
   return (
     <div className="bg-white p-3 border rounded mb-5 m-3">
@@ -42,6 +42,7 @@ const Rocket = ({ rocket }) => {
                 <button
                   onClick={() => rocketHandleBtn(rocket.id)}
                   type="button"
+                  name="reserveBtn"
                   className="form-input mt-3 py-2 pr-4 pl-4 bg-blue-500 border-none text-white rounded-sm"
                 >
                   Reserve Rocket
