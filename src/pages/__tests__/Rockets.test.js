@@ -15,7 +15,7 @@ describe('Test the Rockets', () => {
     expect(list).toMatchSnapshot();
   });
 
-  it('Join and Leave Mission', async () => {
+  it('should contain the button in the Rocket component', async () => {
     const data = {
       id: 10,
       name: 'Rocket Test',
