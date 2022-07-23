@@ -10,7 +10,7 @@ This is a React based web application for a company that provides commercial and
 - [ ] REDUX
 - [ ] NPM
 ### Demo
-Coming Soon...
+[Live Demo](https://frolicking-bienenstitch-f9dcce.netlify.app)
 ### Install & Setup
 
 To setup and install this sample Leaderboard project, follow the below steps:
